@@ -10,11 +10,13 @@ export default new Router({
     {
       path: '/',
       component: () => import('@/layouts/Default.vue'),
-      children: [
-        { path: '', name: 'JobsWithTag', component: () => import('@/components/JobsWithTag.vue') },
-        { path: '/jobs', name: 'JobsDefault', component: () => import('@/components/JobsDefault.vue') },
+      children: [ 
+        { path: '', name: 'Landing', component: () => import('@/views/Landing.vue') },
+        { path: '/all-jobs', name: 'AllJobs', component: () => import('@/views/AllJobs.vue') },
+        { path: '/job-details', name: 'JobDetails', component: () => import('@/views/JobDetails.vue') },
         { path: '/create-job-offer', name: 'CreateJobOffer', component: () => import('@/views/create-job-offer/Index.vue') },
-        { path: '/create-job-offer-process', name: 'CreateJobOfferProcess', component: () => import('@/views/create-job-offer/creation-process.vue') }
+        { path: '/create-job-offer-process', name: 'CreateJobOfferProcess', component: () => import('@/views/create-job-offer/creation-process.vue') },
+        { path: '/submitted', name: 'submitted', component: () => import('@/views/JobSubmission.vue') }
       ]
     }
   ]
