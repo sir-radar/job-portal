@@ -18,7 +18,7 @@ export default {
 
 <style scoped>
 #job-submission {
-	height:50vh;
+	height:60vh;
 	background: #F2F2F2;
 }
 #job-submission h1 {

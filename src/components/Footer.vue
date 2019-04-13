@@ -2,7 +2,7 @@
   <footer id="footer">
 		<div class="container">
 			<div class="row footer-wrap px-5">
-				<div  class="col-md-4 col-xs-12 col-sm-4 ">
+				<div  class="offset-1 col-md-4 col-xs-12 col-sm-4 ">
 					<img src="/assets/logo2.svg"><br><br>
 					<p>Copyright 2019. All rights reserved.</p>
 					<div class="newsletter-social-links"> 
@@ -19,7 +19,7 @@
 					<p>Lopsum Ipsum Ropsum Musuem</p>
 					<p>Lopsum Ipsum Ropsum Musuem</p> 
 				</div> 
-				<div class="col-md-4 col-xs-12 col-sm-4 job-post">  
+				<div class="col-md-3 col-xs-12 col-sm-4 job-post">  
 					<p><span>3,456</span> Jobs Posted</p>
 					<p><span>169,456</span>Subscribers</p>
 					<button>Post a Job</button><br><br>
