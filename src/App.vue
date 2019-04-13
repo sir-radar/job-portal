@@ -6,7 +6,7 @@
 
 <style lang="scss">
 #app {
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif; 
+  font-family: 'Montserrat'; 
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
