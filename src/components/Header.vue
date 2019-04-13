@@ -1,7 +1,7 @@
 <template>
   <main id="header">
 		<div class="container d-flex justify-content-between p-4"> 
-			<img src="/assets/logo.png">  
+			<img src="/assets/logo.svg">  
 			<div class="d-flex justify-content-between align-items-center">
 				<i class="fas fa-search mr-4"></i>  
 				<router-link to="/#" class="mr-4">Browse</router-link>
@@ -35,7 +35,7 @@ export default {
 	border:2px solid #6C63FF;
 }
 #header img {
-	height:40px; 
+	height:30px; 
 }
 #header i {
 	color: #AEB6BE;

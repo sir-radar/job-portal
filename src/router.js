@@ -11,8 +11,9 @@ export default new Router({
       path: '/',
       component: () => import('@/layouts/Default.vue'),
       children: [
-        { path: '', name: 'JobsWithTag', component: () => import('@/components/JobsWithTag.vue') },
-        { path: '/jobs', name: 'JobsDefault', component: () => import('@/components/JobsDefault.vue') }
+        { path: '', name: 'Landing', component: () => import('@/views/Landing.vue') },
+        { path: '/all-jobs', name: 'AllJobs', component: () => import('@/views/AllJobs.vue') },
+        { path: '/job-details', name: 'JobDetails', component: () => import('@/views/JobDetails.vue') }
       ]
     }
   ]
