@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="126px" height="24px" viewBox="0 0 126 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>JobHuntr.io</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-9.4%" y="-42.0%" width="118.0%" height="184.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="Montserrat-ExtraBold, Montserrat" font-size="20.8" font-weight="600" letter-spacing="-1">
+        <g id="footer" transform="translate(-127.000000, -62.000000)">
+            <g id="nav/logo">
+                <g filter="url(#filter-1)" transform="translate(129.000000, 60.000000)">
+                    <text id="JobHuntr.io">
+                        <tspan x="1.1584" y="20" fill="#DBDAE9">JobHuntr</tspan>
+                        <tspan x="96.992" y="20" fill="#B4AFFF">.i</tspan>
+                        <tspan x="107.3888" y="20" fill="#B4AFFF">o</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

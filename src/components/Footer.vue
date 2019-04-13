@@ -3,7 +3,7 @@
 		<div class="container">
 			<div class="row footer-wrap px-5">
 				<div  class="col-md-4 col-xs-12 col-sm-4 ">
-					<img src="/assets/logo.png"><br><br>
+					<img src="/assets/logo2.svg"><br><br>
 					<p>Copyright 2019. All rights reserved.</p>
 					<div class="newsletter-social-links"> 
 						<a href="" target="_blank"><i class="fab fa-slack"></i></a>
@@ -17,8 +17,7 @@
 					<p class="font-weight-bold pb-3">RESOURCES</p>
 					<p>Lopsum Ipsum Ropsum Musuem</p>
 					<p>Lopsum Ipsum Ropsum Musuem</p>
-					<p>Lopsum Ipsum Ropsum Musuem</p>
-					
+					<p>Lopsum Ipsum Ropsum Musuem</p> 
 				</div> 
 				<div class="col-md-4 col-xs-12 col-sm-4 job-post">  
 					<p><span>3,456</span> Jobs Posted</p>
@@ -51,8 +50,8 @@
 	margin-right:2rem;
 	float:left;
 }
-#footer .footer-wrap img {
-	height:40px;
+#footer img {
+	height:30px;
 	float:left;
 }
 #footer .footer-wrap {
