@@ -1,31 +1,73 @@
   <template>
    <main id="create-jobs">
     <b-container>
+
         <h1 class="text-center">Create Job Offer</h1>
-        <div class="row">
-            <div class="row1 col-md-10 offset-md-1 p-3 d-flex justify-content-between">
-                <div class="col-md-6 text-left">
-                    <div class="col-md-8 p-0 d-flex justify-content-between i-title">
-                        <span class="one">Job Title</span>
-                        <span class="two">Required</span>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">e.g Product Designer etc</label>
-                        <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Product Designer">
-                        <span id="emailHelp" class="form-text form-error">This field is required</span>
-                    </div>
-                    <button type="button" class="btn btn-next float-md-right">NEXT</button>
-                </div>
-               
-            </div>
+        <div class="d-flex col-md-10 offset-md-1 justify-content-center">
+          <div class="d-flex ml-5 mr-5 mb-1" v-for="(tab,i ) in tabs" v-bind:key="tab">
+            <button
+              v-bind:class="['tab-button', { active: currentTab === tab }]"
+              v-on:click="currentTab = tab; currentTab == 'Company Information'? step = 1:  currentTab == 'Job Information'? step = 0: step = step;"
+              >{{ i + 1 }}
+              </button>
+            <span class="m-1 stepper-title">{{tab}}</span>
+          </div>
         </div>
+        <div class="row">
+          
+            <component
+              v-bind:is="currentTabComponent"
+              class="tab"
+            >
+             <div class="row">
+              <div class="stepper-btns d-flex justify-content-around col-md-5 offset-md-3">
+                  <button @click.prevent="cancel()" class="btn stepper-btn-cancel px-5">CANCEL</button>
+                  <button @click.prevent="next()" class="btn stepper-btn-next px-5">NEXT</button>
+              </div>
+            </div>
+            </component>
+
+           
+        </div>
+          
+        
     </b-container>
    </main>
  </template>
  
  <script>
+ import jobInformation from "@/components/job-information.vue";
+ import companyInformation from "@/components/company-information.vue";
+ import payment from "@/components/payment.vue";
  export default {
- 
+  components:{
+    "job-information":jobInformation,
+    "company-information":companyInformation,
+    "payment":payment,
+  },
+  data(){
+    return{
+      step: 0,
+      currentTab: "Job Information",
+      tabs:["Job Information","Company Information","Payment"]
+    }
+  },
+  methods:{
+    next(){
+      this.step++
+      this.currentTab = this.tabs[this.step]
+    },
+    cancel(){
+      this.step = 0;
+      this.currentTab = this.tabs[this.step]
+    }
+  },
+  computed: {
+    currentTabComponent: function () {
+      return this.currentTab.split(' ').join('-').toLowerCase()
+    }
+  }
+
  }
  </script>
  
@@ -38,11 +80,6 @@
     font-weight: bold;
     font-size: 36px;
     color:#22262B; 
-  }
-  .row1{
-    border: 1px solid #D9D6FF;
-    box-sizing: border-box;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   }
   label{
     font-style: normal;
@@ -78,6 +115,38 @@
     color: #fff;
     outline: none;
     padding: 7px 35px;
+  }
+  .tab-button{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    color: #fff;
+    background: #b5b0ff;
+    outline: none;
+  }
+  .stepper-title{
+    line-height: 21px;
+  }
+  .active{
+    background: #6C63FF;
+  }
+  .col-form-label{
+      font-weight:600;
+      text-align:right;
+  }
+  select{
+    outline: none;
+  }
+  .stepper-btn-cancel{
+    background: #f0efff;
+    mix-blend-mode: normal;
+    border-radius: 4px;
+    color: #8481B4;
+  }
+  .stepper-btn-next{
+    background: #6C63FF;
+    border-radius: 4px;
+    color: #fff;
   }
  </style>
  
