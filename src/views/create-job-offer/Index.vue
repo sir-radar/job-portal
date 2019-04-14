@@ -6,15 +6,17 @@
             <div class="row1 col-md-10 offset-md-1 p-3 d-flex justify-content-between">
                 <div class="col-md-6 text-left">
                     <div class="col-md-8 p-0 d-flex justify-content-between i-title">
-                        <span class="one">Email</span>
-                        <span class="two">Required</span>
+                      <span class="one">Email</span>
+                      <span class="two">Required</span>
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Description</label>
-                        <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="me@company.com">
-                        <span id="emailHelp" class="form-text form-error">This field is required</span>
+                      <label for="exampleInputEmail1">Description</label>
+                      <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="me@company.com">
+                      <span id="emailHelp" class="form-text form-error">This field is required</span>
                     </div>
-                    <button type="button" class="btn btn-next float-md-right">NEXT</button>
+                    <router-link to="/create-job-offer-process">
+                      <button type="button" class="btn btn-next float-md-right">NEXT</button>
+                    </router-link>
                 </div>
                 <div class="col-md-6 text-left">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci suscipit voluptate aperiam impedit quidem placeat quos, asperiores dolore molestias perspiciatis.

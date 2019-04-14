@@ -20,7 +20,10 @@
               class="tab"
             >
              <div class="row">
-              <div class="stepper-btns d-flex justify-content-around col-md-5 offset-md-3">
+              <div style="margin-left: 60%;" class="offset-md-7" v-if="currentTabComponent == 'payment'">
+                <button @click.prevent="next()" class="btn stepper-btn-next px-5">COMPLETE PAYMENT</button>
+              </div>
+              <div v-else class="stepper-btns d-flex justify-content-around col-md-5 offset-md-3">
                   <button @click.prevent="cancel()" class="btn stepper-btn-cancel px-5">CANCEL</button>
                   <button @click.prevent="next()" class="btn stepper-btn-next px-5">NEXT</button>
               </div>
@@ -63,7 +66,7 @@
     }
   },
   computed: {
-    currentTabComponent: function () {
+    currentTabComponent() {
       return this.currentTab.split(' ').join('-').toLowerCase()
     }
   }
