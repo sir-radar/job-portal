@@ -19,7 +19,7 @@
         >
           <div class="row">
             <div style="margin-left: 60%;" class="offset-md-7" v-if="currentTabComponent == 'payment'">
-              <button @click.prevent="next()" class="btn stepper-btn-next px-5">COMPLETE PAYMENT</button>
+              <router-link to="/submitted"><button class="btn stepper-btn-next px-5">COMPLETE PAYMENT</button></router-link>
             </div>
             <div v-else class="stepper-btns d-flex justify-content-around col-md-5 offset-md-3">
                 <button @click.prevent="cancel()" class="btn stepper-btn-cancel px-5">CANCEL</button>

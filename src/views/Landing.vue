@@ -22,7 +22,7 @@
 							<JobsDefault v-for="(job, i) in JobsDefault" :key="i" :job_default="job"/>
 						</div> 
 					</div>
-					<button class="btn2 my-3">View More</button>
+					<router-link to="/all-jobs"><button class="btn2 my-3">View More</button></router-link>
 					<h2 class="pt-5 mt-3">Looking for a job?</h2>
 					<p>Subscribe below to be among the first to receive Job offers</p>
 					<div class="col-md-8 offset-md-2 d-flex">
