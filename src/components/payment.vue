@@ -1,7 +1,8 @@
 <template>
  <div class="col-md-10 offset-md-1 p-3 ">
     <div class="d-flex justify-content-center align-items-start"> 
-     <div @click="activate" ref="box1" class="col-md-3 b p-3">
+     <div class="col-md-3 b p-3">
+         <i class="far fa-check-circle checker"></i>
          <p>Basic</p>
          <div class="text-left"><i class="fas fa-check"></i> <span class="ml-2">Point 1</span></div>
          <div class="text-left"><i class="fas fa-check"></i> <span class="ml-2">Point 2</span></div>
@@ -13,6 +14,7 @@
          </div>
      </div>
      <div class="col-md-3 b p-3">
+         <i class="far fa-check-circle checker"></i>
          <p>Standard</p>
          <div class="text-left"><i class="fas fa-check"></i> <span class="ml-2">Point 1</span></div>
          <div class="text-left"><i class="fas fa-check"></i> <span class="ml-2">Point 2</span></div>
@@ -24,6 +26,7 @@
          </div>
      </div>
      <div class="col-md-3 b p-3">
+         <i class="far fa-check-circle checker"></i>
          <p>Standard</p>
          <div class="text-left"><i class="fas fa-check"></i> <span class="ml-2">Point 1</span></div>
          <div class="text-left"><i class="fas fa-check"></i> <span class="ml-2">Point 2</span></div>
@@ -67,17 +70,31 @@ import VueTrix from 'vue-trix'
       selectedArray:[]
     }
   },
-  methods:{
-    activate(event){
-        console.log(event)
-        
+  mounted(){ 
+    var btns = document.getElementsByClassName("b"); 
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function() {
+        var current = document.getElementsByClassName("active");
+        var current2 = document.getElementsByClassName("showed");
+        // If there's no active class
+        if (current.length > 0) { 
+          current[0].className = current[0].className.replace(" active", "");
+        }
+        if (current2.length > 0) { 
+          current2[0].className = current2[0].className.replace(" showed", "");
+        }
+        // Add the active class to the current/clicked button
+        this.className += " active";
+        this.childNodes[0].className += " showed";
+      });
     }
   }
 
- }
+ };
  </script>
  <style scoped>
  .b{
+    position: relative;
     height: auto;
     width: 35px;
     margin: 10px;
@@ -108,5 +125,15 @@ import VueTrix from 'vue-trix'
  h2{
     font-weight: bold;
     font-size: 28px;
+ }
+ .checker{
+    position:absolute;
+    color: #09A378;
+    right: 2rem;
+    top: 1.3rem;
+    display: none;
+ }
+ .showed{
+     display: block !important;
  }
  </style>
