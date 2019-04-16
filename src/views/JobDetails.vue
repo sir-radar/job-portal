@@ -52,7 +52,7 @@
 							<p class="border-bottom pb-3 socials pl-3">
 								<i class="fab fa-linkedin mr-3 icon3"></i><a class="anchor2" href="#">Share on LinkedIn</a>
 							</p>
-							<button class="btn3 col-md-12">Apply</button>
+							<router-link to="/create-job-offer"><button class="btn3 col-md-12">Apply</button></router-link>
 						</div>
 					</div>
 				</div>

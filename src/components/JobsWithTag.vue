@@ -14,7 +14,7 @@
             </div>
           </div> 
         </div>
-        <button class="apply-button">APPLY NOW</button>
+        <router-link to="/job-details"><button class="apply-button">APPLY NOW</button></router-link>
       </div> 
     </b-container> 
   </main>
